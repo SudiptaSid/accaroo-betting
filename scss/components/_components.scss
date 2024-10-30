@@ -1,0 +1,117 @@
+// Padding & Margin
+.p-80 {
+    padding:80px 0;
+    /* ----- Max Width 767px ----- */
+    @media (max-width: $break_767) {
+        padding:50px 0;
+    }
+}
+.pt-80 {
+    padding-top:80px;
+    /* ----- Max Width 767px ----- */
+    @media (max-width: $break_767) {
+        padding-top:50px;
+    }
+}
+.pb-80 {
+    padding-bottom:80px;
+    /* ----- Max Width 767px ----- */
+    @media (max-width: $break_767) {
+        padding-bottom:50px;
+    }
+}
+
+// Loader Style
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    text-align: center;
+    background: $white-clr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .loader_div {
+        border: 6px solid lighten($primary-clr, 30%);
+        border-radius: 50%;
+        border-top: 6px solid $primary-clr;
+        width: 60px;
+        height: 60px;
+        -webkit-animation: spin 1.5s linear infinite;
+        animation: spin 1.5s linear infinite;
+    }
+}
+
+// Warning Message
+.warning-msg {
+    color: $black-light;
+    background-color: $grey-clr;
+    display: block;
+    padding: 15px;
+    padding-left: 45px;
+    position: relative;
+    border-right:4px solid $primary-clr;
+    border-left:4px solid $primary-clr;
+    &:before {
+        content: url(../images/warn-icon-left.png);
+        position: absolute;
+        left: 15px;
+    }
+}
+
+// Static Banner
+#static-banner {
+    // color:$white-clr;
+    // background-color:$purple-clr;
+    // background: linear-gradient(45deg, $primary-clr, 30%, $purple-clr);
+    // padding:60px 0;
+    // /* ----- Max Width 767px ----- */
+    // @media (max-width: $break_767) {
+    //     padding:30px 0;
+    // }
+    .content {
+        padding:40px 0;
+        border-radius:10px;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            padding:30px 0;
+        }
+    }
+    h2 {
+        font-size:40px;
+        line-height:46px;
+        margin-bottom:10px;
+        font-weight:700;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            font-size:22px;
+            line-height:28px;
+        }
+    }
+    ul {
+        color:$grey-clr;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            font-size:13px;
+        }
+        li {
+            display: inline-block;
+            +li {
+                &:before {
+                    content:' » ';
+                    margin:0px 5px;
+                }
+            }
+            a {
+                color:$grey-clr;
+                font-weight:700;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

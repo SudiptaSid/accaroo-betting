@@ -1,0 +1,238 @@
+// League Page
+#league-pg {
+    .league-listing {
+        margin-top:20px;
+        border:1px solid $grey-clr;
+        padding:15px;
+        border-radius:6px;
+        a {
+            display: flex;
+            justify-content:space-between;
+            align-items:center;
+            .icon-sec {
+                width:80px;
+                span {
+                    display: inline-block;
+                    width:55px;
+                    height:55px;
+                    font-size:30px;
+                    line-height:55px;
+                    color:$primary-clr;
+                    background-color:$white-clr;
+                    text-align: center;
+                    border-radius:50%;
+                    i {}
+                }
+            }
+            .details-sec {
+                width:calc(100% - 65px);
+                color:$white-clr;
+                h3 {
+                    font-size:16px;
+                    line-height:22px;
+                    font-weight: 700;
+                    margin-bottom:5px;
+                }
+                p {
+                    margin-bottom:0;
+                    font-weight:300;
+                    b {
+                        font-weight:700;
+                        color:$grey2-clr;
+                    }
+                }
+            }
+        }
+    }
+    .btn-sec {
+        margin-top:20px;
+        display: flex;
+        align-items:center;
+        justify-content:center;
+        .btn {
+            min-width:160px;
+            /* ----- Max Width 767px ----- */
+            @media (max-width: $break_767) {
+                min-width:unset;
+            }
+        }
+        span {
+            margin:0 10px;
+        }
+    }
+    // Join & Create League
+    .join-box {
+        background-color:$white-clr;
+        color: $black-light;
+        padding:40px;
+        border-radius:10px;
+        max-width:700px;
+        margin:auto;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            padding:40px 20px;
+        }
+        h4 {
+            font-size:28px;
+            line-height:34px;
+            font-weight:700;
+            margin-bottom:30px;
+            text-align: center;
+            /* ----- Max Width 767px ----- */
+            @media (max-width: $break_767) {
+                font-size:22px;
+                line-height:28px;
+            }
+        }
+        .form-group {
+            label {
+                font-weight:700;
+                margin-bottom:5px;
+            }
+            .form-control {
+                background-color:darken($white-clr, 10%);
+                border-color:darken($white-clr, 10%);
+                color:$black-light;
+            }
+        }
+    }
+
+    // League Details
+    .league-details1 {
+        color: $black-light;
+        background-color:$white-clr;
+        padding:30px;
+        border-radius:10px;
+        margin-bottom:30px;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            padding:15px;
+        }
+        h3 {
+            font-size:24px;
+            line-height:30px;
+            font-weight:700;
+            /* ----- Max Width 767px ----- */
+            @media (max-width: $break_767) {
+                font-size:20px;
+                line-height:26px;
+            }
+        }
+        p {
+            font-size:16px;
+            line-height:22px;
+            margin-bottom:5px;
+            /* ----- Max Width 767px ----- */
+            @media (max-width: $break_767) {
+                font-size:14px;
+                line-height:18px;
+            }
+        }
+        .btn-sec {
+            margin-top:15px;
+        }
+        .share-links {
+            display: flex;
+            margin:40px 0;
+            li {
+                +li {
+                    margin-left:10px;
+                }
+                a {
+                    display: inline-block;
+                    width:40px;
+                    border-radius:5px;
+                    background-color:$white-clr;
+                }
+            }
+        }
+        .copy-code {
+            a {
+                color:$grey2-clr;
+                text-decoration: underline;
+                font-weight:600;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .league-details2 {
+        .nav-tabs {
+            border-bottom: none;
+            justify-content:space-between;
+            .nav-item {
+                width:33%;
+                margin-bottom:0;
+            }
+            .nav-link {
+                border-radius:0;
+                color:$grey2-clr;
+                background-color:$grey-clr;
+                border-color:$grey-clr;
+                text-align: center;
+                font-weight:700;
+                &.active {
+                    color:$white-clr;
+                    background-color:$primary-clr;
+                    border-color:$primary-clr;
+                }
+            }
+        }
+        .ld-tab-heading {
+            color: $black-light;
+            background-color: $grey-clr;
+            text-align: center;
+            margin: 15px 0;
+            padding: 15px 0;
+            h5 {
+                margin-bottom: 0;
+                font-weight: 700;
+            }
+        }
+        .ld-tab-body {
+            color: $black-light;
+            background-color:$white-clr;
+            padding:30px;
+            border-radius:10px;
+            /* ----- Max Width 767px ----- */
+            @media (max-width: $break_767) {
+                padding:15px;
+            }
+            h6 {
+                font-size:18px;
+                line-height:24px;
+                font-weight:700;
+            }            
+            table {
+                border:1px solid $grey-clr;
+                width:100%;
+                min-width:400px;
+                margin-bottom:0;
+                tr {
+                    vertical-align:middle;
+                }
+                td {
+                    padding:10px;
+                    &:first-child {
+                        width:90px;
+                    }
+                    &:nth-child(2) {
+                        min-width:200px;
+                    }
+                    &:nth-child(3) {
+                        width:70px;
+                    }
+                    &:nth-child(4) {
+                        width:70px;
+                    }
+                    &:last-child {
+                        width:70px;
+                    }
+                    img.wait-win {
+                        height:20px;
+                        width:auto;
+                    }
+                }
+            }
+        }
+    }
+}

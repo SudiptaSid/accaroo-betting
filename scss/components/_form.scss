@@ -1,0 +1,214 @@
+// Form
+input, textarea, select {
+    outline:none !important;
+    box-shadow:none !important;
+    text-shadow:none !important;
+    &:focus {
+        outline:none !important;
+        box-shadow:none !important;
+        text-shadow:none !important;
+    }
+}
+
+.form-group {
+    margin-bottom:15px;
+    label {
+        font-size:14px;
+        line-height:18px;
+        margin-bottom:12px;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            margin-bottom:10px;
+        }
+    }
+    .error-msg {
+        display: none;
+    }
+    &.error {
+        .form-control {
+            border-color:#e42222;
+        }
+        .error-msg {
+            font-size:14px;
+            line-height:18px;
+            color:#e42222;
+            margin-top:12px;
+            display: block;
+            /* ----- Max Width 767px ----- */
+            @media (max-width: $break_767) {
+                margin-top:10px;
+            }
+        }
+    }    
+}
+.frm-grp2 {
+    display: flex;
+    .grid {
+        width:50%;
+    }
+}
+
+.form-control {
+    font-size:14px;
+    line-height:20px;
+    padding:10px 15px;
+    background-color:$white-clr;
+    color:$black-light;
+    border:1px solid $grey-clr;
+    border-radius:0;
+    /* ----- Max Width 767px ----- */
+    @media (max-width: $break_767) {
+        line-height:18px;
+        padding:8px 15px;
+    }
+    &::placeholder {
+        color:$grey2-clr;
+    }
+}
+
+// Checkboox
+.custom-checkbox {
+	display: inline-block;
+	position: relative;
+	padding-left: 25px;
+	margin-bottom: 10px;
+	cursor: pointer;
+    user-select: none;
+    font-size:14px;
+    line-height: 20px;
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color:$white-clr;
+        border:1px solid $grey-clr;
+        border-radius: 2px;
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 6px;
+            top: 1px;
+            width: 6px;
+            height: 12px;
+            border: solid $white-clr;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked~.checkmark {            
+            background-color:$primary-clr;
+            border-color:$primary-clr;
+            &:after {
+                display: block;
+            }
+        }
+    }
+}
+
+// Radio
+.custom-radio {
+	display: inline-block;
+	position: relative;
+	padding-left: 25px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+    user-select: none;
+    line-height: 24px;
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        border:1px solid $grey-clr;
+        border-radius: 50%;
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            top: 6px;
+            left: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $white-clr;
+        }
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        &:checked~.checkmark {
+            background-color:$primary-clr;
+            border-color:$primary-clr;
+            &:after {
+                display: block;
+            }
+        }
+    }
+}
+
+// Text Radio
+.text-radio {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+    user-select: none;
+    padding:4px 8px;
+    text-align: center;
+    border:none;
+    z-index:4;
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border:none;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color:$grey-clr;
+            z-index:-1;
+        }
+    }
+    .text-radio-label {
+        text-transform: capitalize;
+        display: block;
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked~.checkmark {
+            &:after {
+                background-color:$primary-clr;
+                display: block;
+            }
+        }
+        &:checked~.text-radio-label {
+            color:$white-clr;
+        }
+    }
+}

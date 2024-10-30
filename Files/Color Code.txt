@@ -1,0 +1,15 @@
+Red Color Code:
+
+HEX CODE: ED1C24
+
+R:237
+G:28
+B:36
+
+Blue Color Code:
+
+HEX CODE: 0B0B6B
+
+R:11
+G:11
+B:107

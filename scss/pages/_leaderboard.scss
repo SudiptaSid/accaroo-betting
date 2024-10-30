@@ -1,0 +1,156 @@
+// Leaderboard Page
+#leaderboard-pg {
+    .leaderboard-filter {
+        margin:20px 0;
+        display: flex;
+        align-items:center;
+        justify-content:flex-end;
+        .form-control {
+            max-width:150px;
+            height:auto;
+            background-color: $grey-clr;
+            border: 1px solid $grey-clr;
+            padding: 5px 10px;
+            &#leader-short {
+                margin:0 10px;
+            }
+            option {
+                color:$black-light;
+            }
+        }
+    }
+    .leader-board-tables {
+        .share-sec {
+            margin:15px 0;
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                li {
+                    line-height:1;
+                    +li {
+                        margin-left:10px;
+                    }
+                    a {
+                        display: inline-block;
+                        background-color:$white-clr;
+                        border-radius:2px;
+                        overflow:hidden;
+                        img {
+                            width:30px;
+                        }
+                    }
+                }
+            }
+        }
+        .global-top {
+            color:$black-light;
+            background-color:$grey-clr;
+            text-align: center;
+            margin-bottom:15px;
+            padding:15px 0;
+            h5 {
+                margin-bottom:0;
+                font-weight: 700;
+            }
+        }
+        .search-leader {
+            position: relative;
+            margin-bottom:15px;
+            .form-control {
+                padding-right:42px;
+                height:42px;
+                border:none;
+            }
+            button {
+                color:$black-light;
+                background-color:$no-clr;
+                border:none;
+                width:42px;
+                height:42px;
+                padding:0;
+                position: absolute;
+                top:0;
+                right:0;
+                font-size:20px;
+            }
+        }
+        table {
+            border:1px solid $grey-clr;
+            width:100%;
+            min-width:400px;
+            margin-bottom:0;
+            tr {
+                vertical-align:middle;
+            }
+            th {
+                color:$black-light;
+                background-color:$grey-clr;
+                padding:5px 10px;
+                font-size:12px;
+                &:first-child {
+                    width:90px;
+                }
+                &:nth-child(2) {
+                    min-width:200px;
+                }
+                &:nth-child(3) {
+                    width:70px;
+                }
+                &:nth-child(4) {
+                    width:70px;
+                }
+                &:nth-child(5) {
+                    width:70px;
+                }
+                &:nth-child(6) {
+                    width:50px;
+                }
+                &:last-child {
+                    width:40px;
+                    text-align: center;
+                }
+            }
+            td {
+                padding:10px;
+                &:first-child {
+                    text-align: center;
+                    width:90px;
+                }
+                &:nth-child(2) {
+                    min-width:200px;
+                }
+                &:nth-child(3) {
+                    width:70px;
+                }
+                &:nth-child(4) {
+                    width:70px;
+                }
+                &:nth-child(5) {
+                    width:70px;
+                }
+                &:nth-child(6) {
+                    width:50px;
+                }
+                &:last-child {
+                    width:40px;
+                    text-align: center;
+                }
+                a {
+                    display: inline-block;
+                    color:$grey-clr;
+                    &.names {
+                        font-weight: 700;
+                    }
+                    &.views {
+                        text-decoration: underline;
+                    }
+                }
+                img.wait-win {
+                    height:20px;
+                    width:auto;
+                }
+            }
+        }
+    }
+}

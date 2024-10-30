@@ -1,0 +1,348 @@
+#play-pg {
+    .max-content {
+        max-width:700px;
+        margin:auto;
+    }
+}
+
+// Play Bet Grid
+.play-box {
+    border:1px solid $grey-clr;
+    color: $black-light;
+    .play-head {
+        background-color:$grey-clr;
+        display: flex;
+        align-items:center;
+        justify-content:space-between;
+        padding:5px 10px;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            font-size:12px;
+            line-height:16px;
+        }
+        span {
+            &:first-child {
+                font-weight: 600;
+            }
+        }
+    }
+    .play-body {
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:20px;
+        background-color:$white-clr;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            padding:20px 10px;
+        }
+        .team-grid {
+            .teams {
+                text-align: center;
+                img {
+                    max-width:80px;
+                    /* ----- Max Width 767px ----- */
+                    @media (max-width: $break_767) {
+                        max-width:50px;
+                    }
+                }
+                h3 {
+                    margin-top:10px;
+                    margin-bottom:0;
+                    font-size:18px;
+                    line-height:24px;
+                    font-weight:400;
+                    letter-spacing: -1px;
+                    /* ----- Max Width 767px ----- */
+                    @media (max-width: $break_767) {
+                        font-size:14px;
+                        line-height:18px;
+                    }
+                }
+            }
+            .bets {
+                display: flex;
+                align-items:center;
+                justify-content: space-between;
+                .bet-number {
+                    text-align: center;
+                    button {
+                        text-align: center;
+                        border:none;
+                        color:$black-light;
+                        background-color:$no-clr;
+                        padding:0;
+                        font-size:30px;
+                        line-height:1;
+                        /* ----- Max Width 767px ----- */
+                        @media (max-width: $break_767) {
+                            font-size:20px;
+                        }
+                    }
+                    input {
+                        width:40px;
+                        height:40px;
+                        font-size:20px;
+                        line-height:40px;
+                        font-weight: 700;
+                        border:1px solid $grey-clr;
+                        text-align: center;
+                        display: block;
+                        margin:5px 0;
+                        padding:0;
+                        /* ----- Max Width 767px ----- */
+                        @media (max-width: $break_767) {
+                            width:30px;
+                            height:30px;
+                            font-size:16px;
+                            line-height:30px;
+                        }
+                    }
+                }
+                .divider {
+                    margin:10px;
+                    text-align: center;
+                    span {
+                        font-weight: 600;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    .play-footer {
+        background-color:$grey-clr;
+        // display: flex;
+        // align-items:center;
+        // justify-content:space-between;
+        text-align: center;
+        a {
+            display: block;
+            // width:50%;
+            text-align: center;
+            padding:10px;
+            color:$secondary-clr;
+            /* ----- Max Width 767px ----- */
+            @media (max-width: $break_767) {
+                padding:5px 10px;
+            }
+            span {
+                display: block;
+                font-weight:700;
+            }
+        }
+    }
+}
+
+// Play Stats Modal
+.play-modal {
+    color:$black-light;
+    .modal-dialog {
+        max-width: 800px;
+        .modal-content {
+            border: none;
+            box-shadow: $shadow-1;
+            border-radius: 0;
+            .modal-header {
+                color: $white-clr;
+                background-color: $secondary-clr;
+                padding: 8px 15px;
+                border-radius: 0;
+                display: flex;
+                align-items: center;
+                h5 {
+                    font-weight: 600;
+                    text-align: center;
+                    margin-bottom: 0;
+                }
+                .close {
+                    padding: 0;
+                    margin: 0;
+                    font-size: 30px;
+                    line-height: 1;
+                    font-weight: 300;
+                    opacity: 1;
+                    color: $white-clr;
+                    text-shadow: none;
+                }
+            }
+            .modal-body {
+                .stats-table {
+                    .teams-name {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        img {
+                            max-width: 50px;
+                            margin-right: 10px;
+                        }
+                        span {
+                            font-size: 16px;
+                            font-weight: 700;
+                            line-height: 1.5;
+                        }
+                    }
+                    ul {
+                        li {
+                            border: 1px solid $grey2-clr;
+                            border-radius:6px;
+                            color: #838383;
+                            font-size: 12px;
+                            line-height: 1.4;
+                            + li {
+                                margin-top:10px;
+                            }
+                            .top-title {
+                                display: block;
+                                font-weight: 600;
+                                padding: 10px;
+                                text-align: center;
+                            }
+                            .result-box {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding: 10px 0;
+                                .left-sec {
+                                    border-right: 1px solid $grey2-clr;
+                                    width: calc(100% - 100px);
+                                    .teams {
+                                        padding:0 10px;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        position: relative;
+                                        img {
+                                            width: 20px;
+                                            margin-right:5px;
+                                        }
+                                        &.winner {
+                                            &:after {
+                                                content:'';
+                                                position: absolute;
+                                                border-left: 5px solid transparent;
+                                                border-right: 5px solid $black-clr;
+                                                border-top: 5px solid transparent;
+                                                border-bottom: 5px solid transparent;
+                                                width: 10px;
+                                                height: 10px;
+                                                right: 0;
+                                                top: 50%;
+                                                transform: translateY(-50%);
+                                            }
+                                            .span1 {
+                                                color: $black-light;
+                                                font-weight:700;
+                                            }
+                                            .span2 {
+                                                color: $black-light;
+                                                font-weight:700;
+                                            }
+                                        }
+                                        + .teams {
+                                            margin-top:10px;
+                                        }
+                                    }
+                                }
+                                .right-sec {
+                                    padding: 0 10px;
+                                    text-align: center;
+                                    min-width: 100px;
+                                    span {
+                                        b {
+                                            display: block;
+                                            color: $black-light;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Golden Predction
+.golden-prediction {
+    text-align: center;
+    margin-top: 50px;
+    h3 {
+        font-size:26px;
+        line-height:32px;
+        font-weight:600;
+        margin-bottom:0;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            font-size:20px;
+            line-height:26px;
+        }
+    }
+    .border-txt {
+        margin:20px 0;
+        border:1px solid $grey-clr;
+        padding:10px 0;
+        text-align: center;
+        span {
+            font-weight: 700;
+            font-size:20px;
+            line-height:1;
+        }
+    }
+    p {
+        color:$grey-clr;
+        margin-bottom:0;
+    }
+    hr {
+        border-color:$grey-clr;
+        margin:30px 0;
+    }
+    .short-space {
+        max-width:350px;
+        margin:auto;
+        .challenge {
+            position: relative;
+            a {
+                display: block;
+                padding: 15px 0;
+                span {
+                    &:first-child {
+                        display: block;
+                        padding: 15px;
+                        color: $white-clr;
+                        background-color: $secondary-clr;
+                        font-size: 18px;
+                        line-height: 1;
+                        text-align: left;
+                        width: calc(100% - 40px);
+                        /* ----- Max Width 767px ----- */
+                        @media (max-width: $break_767) {
+                            font-size:16px;
+                        }
+                    }
+                    &:last-child {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 76px;
+                        height: 76px;
+                        color: $white-clr;
+                        background-color: $secondary-clr;
+                        font-size: 12px;
+                        line-height: 16px;
+                        font-weight: 700;
+                        padding: 20px 0;
+                        border: 2px solid $white-clr;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+        p {
+            font-size:12px;
+            line-height:16px;
+            margin-top:15px;
+        }
+    }
+}

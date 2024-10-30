@@ -1,0 +1,288 @@
+// Static Page
+#static-pg {
+    color:$black-light;
+    h2, h3, h4 {
+        font-weight: 700;
+        margin-bottom:0;
+    }
+    h2 {
+        font-size:30px;
+        line-height:36px;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            font-size:26px;
+            line-height:32px;
+        }
+        +p {
+            margin-top:15px;
+        }
+        +h3 {
+            margin-top:20px;
+        }
+    }
+    h3 {
+        font-size:20px;
+        line-height:26px;
+        font-weight:600;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            font-size:18px;
+            line-height:24px;
+        }
+        +p {
+            margin-top:10px;
+        }
+    }
+    p {
+        margin-bottom:0;
+        color:$grey2-clr;
+        +h2 {
+            margin-top:50px;
+            /* ----- Max Width 767px ----- */
+            @media (max-width: $break_767) {
+                margin-top:30px;
+            }
+        }
+        +h3 {
+            margin-top:20px;
+        }
+        +p {
+            margin-top:15px;
+        }
+    }
+    a {
+        font-weight: 700;
+        color:$primary-clr;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .content {
+        padding:40px;
+        border-radius:10px;
+        background-color:$white-clr;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            padding:40px 20px;
+        }
+    }
+}
+
+// Contact Page
+#contact-pg {
+    .box {
+        background-color:$white-clr;
+        padding:40px;
+        border-radius:10px;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            padding:40px 20px;
+        }
+        #maps {
+            iframe {
+                width:100%;
+                height:400px;
+                border:none;
+            }
+        }
+        .content {
+            padding-left:30px;
+            /* ----- Max Width 767px ----- */
+            @media (max-width: $break_767) {
+                padding-left:0;
+            }
+            h2 {
+                font-size:30px;
+                line-height:36px;
+                margin-bottom:30px;
+                font-weight:700;
+                color:$black-light;
+                /* ----- Max Width 767px ----- */
+                @media (max-width: $break_767) {
+                    font-size:26px;
+                    line-height:32px;
+                    margin-bottom:20px;
+                }
+            }
+            h5 {
+                font-size:16px;
+                line-height:22px;
+                margin-bottom:10px;
+                font-weight:700;
+                color: $black-light;
+            }
+            p {
+                color:$grey2-clr;
+                /* ----- Max Width 767px ----- */
+                @media (max-width: $break_767) {
+                    margin-bottom: 20px;
+                }
+            }
+            .divider1 {
+                margin-bottom:20px;
+            }
+        }
+    }
+}
+
+// How To Play Page
+#how-to-play-pg {
+    color: $black-light;
+    .box {
+        background-color:$white-clr;
+        padding:40px;
+        border-radius:10px;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            padding: 20px;
+        }
+        .left-img {
+            /* ----- Max Width 767px ----- */
+            @media (max-width: $break_767) {
+                margin-bottom:30px;
+            }
+            img {
+                width:100%;
+            }
+        }
+        .white-box {
+            padding:20px;
+            border-radius:6px;
+            background-color:$grey-clr;
+            display: flex;
+            /* ----- Max Width 767px ----- */
+            @media (max-width: $break_767) {
+                padding:15px;
+            }
+            .img-sec {
+                display: inline-block;
+                width:60px;
+                height:60px;
+                border-radius:50%;
+                /* ----- Max Width 767px ----- */
+                @media (max-width: $break_767) {
+                    width:40px;
+                    height:40px;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            .details-sec {
+                width: calc(100% - 60px);
+                padding-left: 30px;
+                /* ----- Max Width 767px ----- */
+                @media (max-width: $break_767) {
+                    width:calc(100% - 40px);
+                    padding-left:15px;
+                }
+                h4 {
+                    margin-bottom:10px;
+                    font-size:22px;
+                    line-height:28px;
+                    font-weight:700;
+                    /* ----- Max Width 767px ----- */
+                    @media (max-width: $break_767) {
+                        font-size:18px;
+                        line-height:24px;
+                    }
+                }
+                p {
+                    margin-bottom:0;
+                    font-size:15px;
+                    line-height:22px;
+                    color:$grey2-clr;
+                    /* ----- Max Width 767px ----- */
+                    @media (max-width: $break_767) {
+                        font-size:14px;
+                        line-height:18px;
+                    }
+                }
+            }
+        }
+        .divider {
+            margin:20px 0;
+            text-align: center;
+            /* ----- Max Width 767px ----- */
+            @media (max-width: $break_767) {
+                margin:15px 0;
+            }
+            span {
+                display: inline-block;
+                img {
+                    width:14px;
+                    height:auto;
+                    /* ----- Max Width 767px ----- */
+                    @media (max-width: $break_767) {
+                        width:12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// About Page
+#about-pg {
+    .box {
+        background-color:$white-clr;
+        padding:40px;
+        border-radius:10px;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            padding:40px 20px;
+        }
+        .divider {
+           height:60px;
+            /* ----- Max Width 767px ----- */
+            @media (max-width: $break_767) {
+                height:30px;
+            }
+        }
+        .section-heading2 {
+            color:$black-light;
+            h6 {
+                margin-bottom:0;
+                color:$primary-clr;
+            }
+            h2 {
+                /* ----- Max Width 767px ----- */
+                @media (max-width: $break_767) {
+                    letter-spacing: normal;
+                }
+            }
+        }
+    }
+}
+
+// Feedbak Page
+#feedback-pg {
+    .box {
+        background-color:$white-clr;
+        padding:40px;
+        border-radius:10px;
+        max-width:700px;
+        margin:auto;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            padding:40px 20px;
+        }
+        .form-group {
+            margin-bottom:25px;
+            label {
+                font-weight:700;
+                margin-bottom:5px;
+                color:$black-light;
+            }
+            .form-control {
+                background-color:darken($white-clr, 10%);
+                border-color:darken($white-clr, 10%);
+                color:$black-light;
+                height:auto;
+                option {
+                    background-color:$white-clr;
+                }
+            }
+        }
+    }
+}

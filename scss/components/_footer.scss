@@ -1,0 +1,147 @@
+// Footer
+footer {
+    background-size:cover;
+    background-position:center;
+    padding:80px 0;
+    /* ----- Max Width 767px ----- */
+    @media (max-width: $break_767) {
+        padding:50px 0;
+    }
+    .logo-sec {
+        text-align: center;
+        position: relative;
+        z-index:4;
+        margin-bottom:50px;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            margin-bottom:30px;
+        }
+        &:after, &:before {
+            content:'';
+            width:38%;
+            height:1px;
+            background-color:$white-clr;
+            position: absolute;
+            top:50%;
+            left:0;
+            transform:translateY(-50%);
+            z-index:-1;
+            /* ----- Max Width 767px ----- */
+            @media (max-width: $break_767) {
+                width:24%;
+            }
+        }
+        &:after {
+            right:0;
+            left:auto;
+        }
+        a {
+            display: inline-block;
+            img {
+                height:30px;
+                /* ----- Max Width 767px ----- */
+                @media (max-width: $break_767) {
+                    height:20px;
+                }
+            }
+        }
+    }
+    h4 {
+        font-size:24px;
+        line-height:30px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            font-size:20px;
+            line-height:26px;
+            letter-spacing: normal;
+        }
+    }
+    ul {
+        margin-bottom:50px;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            margin-bottom:30px;
+            font-size:12px;
+            line-height:18px;
+        }
+        li {
+            +li {
+                margin-top:15px;
+                /* ----- Max Width 767px ----- */
+                @media (max-width: $break_767) {
+                    margin-top:10px;
+                }
+            }
+            a {
+                color:$grey3-clr;
+                display: inline-block;
+                &:hover {
+                    color: $primary-clr;
+                }
+            }
+        }
+    }
+    .btn {
+        width:100%;
+        /* ----- Max Width 767px ----- */
+        @media (max-width: $break_767) {
+            font-size: 12px;
+            line-height:18px;
+            padding:6px;
+        }
+    }
+    .divider {
+        height:1px;
+        background-color:$white-clr;
+    }
+    .under-age {
+        max-width:460px;
+        text-align: center;
+        margin:auto;
+        margin-top:50px;
+        .age-circle {
+            span {
+                width:60px;
+                height:60px;
+                font-size:30px;
+                line-height:60px;
+                font-weight: 700;
+                text-align: center;
+                display: inline-block;
+                border-radius:50%;
+                background-color:$primary-clr;
+            }
+            +p{
+                margin-top:20px;
+            }
+        }
+        p {
+            font-size:12px;
+            line-height:16px;
+            margin-bottom:15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            &:last-child {
+                margin-bottom:0;
+            }
+            a {
+                color:$white-clr;
+                display: inline-block;
+                &:hover {
+                    text-decoration: underline;
+                    color:$primary-clr;
+                }
+                img {
+                    height:15px;
+                    width:auto;
+                }
+            }
+            span {
+                margin:0 10px;
+            }
+        }
+    }
+}
